@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import PropTypes from 'prop-types';
+import './App.css';
+import React, { Component } from 'react';
 import {
   Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
@@ -15,7 +15,6 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
-import headerPhoto from './assets/header-sepia.jpg';
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -31,14 +30,14 @@ const getWidth = () => {
  * such things.
  */
 const HomepageHeading = ({ mobile }) => (
-  <Container text style={{background: `url(${"./assets/header-sepia.jpg"})`}} >
+  <Container text>
     <Header
       as='h1'
       content='Skup złomu MAPOL'
       inverted
       style={{
         fontSize: mobile ? '2.5em' : '4em',
-        fontWeight: 'normal',
+        fontWeight: 'bold',
         marginBottom: 0,
         marginTop: mobile ? '2em' : '3em',        
       }}
@@ -49,11 +48,11 @@ const HomepageHeading = ({ mobile }) => (
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
-        fontWeight: 'normal',
+        fontWeight: 'bold',
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button color='orange' size='big'>
+    <Button as='a' href='#o-firmie' color='orange' size='big'>
       Dowiedz się więcej
       <Icon name='right arrow' />
     </Button>
@@ -93,19 +92,17 @@ class DesktopContainer extends Component {
           >
             <Menu
               fixed={fixed ? 'top' : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-              size='huge'
+              color={fixed ? 'red' : 'white'}
+              size={fixed ?  'normal' : 'huge'}
+              borderless
+              style={fixed ? null : {backgroundColor: 'rgba(256,256,256,0)'}}
             >
               <Container>
-                <Menu.Item as='a'>O firmie</Menu.Item>
-                <Menu.Item as='a'>Jak trafić</Menu.Item>
-                <Menu.Item as='a'>Dlaczego MAPOL?</Menu.Item>
+                <Menu.Item as='a' href='#o-firmie'>O firmie</Menu.Item>
+                <Menu.Item as='a' href='#jak-trafic'>Jak trafić</Menu.Item>
+                <Menu.Item as='a' href='#dlaczego-MAPOL'>Dlaczego MAPOL?</Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' color='orange'>
-                    Kontakt
-                  </Button>
+                  <Button as='a' href='#kontakt' color='orange'>Kontakt</Button>
                 </Menu.Item>
               </Container>
             </Menu>
@@ -148,10 +145,10 @@ class MobileContainer extends Component {
           vertical
           visible={sidebarOpened}
         >
-          <Menu.Item as='a'>O firmie</Menu.Item>
-          <Menu.Item as='a'>Jak trafić</Menu.Item>
-          <Menu.Item as='a'>Dlaczego MAPOL?</Menu.Item>
-          <Menu.Item as='a'>Kontakt</Menu.Item>
+          <Menu.Item as='a' href='#o-firmie'>O firmie</Menu.Item>
+          <Menu.Item as='a' href='#jak-trafic'>Jak trafić</Menu.Item>
+          <Menu.Item as='a' href='#dlaczego-MAPOL'>Dlaczego MAPOL?</Menu.Item>
+          <Menu.Item as='a' href='#kontakt'>Kontakt</Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -160,6 +157,7 @@ class MobileContainer extends Component {
             textAlign='center'
             style={{ minHeight: 350, padding: '1em 0em' }}
             vertical
+            className='bg-image'
           >
             <Container>
               <Menu inverted pointing secondary size='large'>
@@ -167,7 +165,7 @@ class MobileContainer extends Component {
                   <Icon name='sidebar' />
                 </Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' color='orange'>
+                  <Button as='a' href='#kontakt' color='orange'>
                     Kontakt
                   </Button>
                 </Menu.Item>
@@ -200,7 +198,7 @@ ResponsiveContainer.propTypes = {
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: '8em 0em' }} vertical>
+    <Segment style={{ padding: '8em 0em' }} vertical id='o-firmie'>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={8}>
@@ -208,7 +206,7 @@ const HomepageLayout = () => (
               O firmie
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-             MAPOL to rodzinna firma założona w 1998 roku, mająca siedzibę w Skawinie. Skupujemy złom wszelkiego rodzaju. Quam et in omnis qui est eum. Aliquid aut deserunt fuga est quia cupiditate. Deleniti dolorem porro exercitationem sequi.
+             MAPOL to rodzinna firma założona w x roku, mająca siedzibę w Skawinie. Skupujemy złom wszelkiego rodzaju. Quam et in omnis qui est eum. Aliquid aut deserunt fuga est quia cupiditate. Deleniti dolorem porro exercitationem sequi.
             </p>
             <p style={{ fontSize: '1.33em' }}>
             Perferendis neque distinctio ea dolorem molestias non sed. Ducimus quasi deserunt mollitia eligendi quo odio eos. Quis aut soluta recusandae et. Ut voluptates aut cum exercitationem et facere saepe eius.
@@ -220,7 +218,7 @@ const HomepageLayout = () => (
         </Grid.Row>
       </Grid>
     </Segment>
-    <Segment inverted style={{ padding: '8em 0em' }} vertical>
+    <Segment inverted style={{ padding: '4em 0em' }} vertical id='kontakt'>
       <Container text style={{color:'white', letterSpacing: 1.5}} textAlign='center'>
         <Header style={{color:'white'}} >
           <Icon name='phone' size='big' flipped='horizontally' circular inverted color='orange'/>
@@ -230,7 +228,7 @@ const HomepageLayout = () => (
         <Header style={{color:'white', letterSpacing: 2, fontSize:'2em'}}>604 994 446</Header>
       </Container>
     </Segment>
-    <Segment style={{ padding: '20em 8em 4em 8em' }} vertical>
+    <Segment style={{ padding: '20em 8em 4em 8em' }} vertical id='jak-trafic'>
       <Grid columns='three' stackable textAlign='center'>
         <Grid.Row>
           <Grid.Column>
@@ -245,7 +243,7 @@ const HomepageLayout = () => (
             </List>
             <Button size='small'>
               <a target="_blank" rel="noopener noreferrer" href='https://www.google.com/maps/place/SKUP+ZŁOMU+F.H.U+"MAPOL"/@49.9726156,19.8083925,15z/data=!4m5!3m4!1s0x0:0xfeabd5dbda18f75a!8m2!3d49.9726156!4d19.8083925' style={{color: 'black'}}>
-                Sprawdź adres w Google Maps
+                Sprawdź trasę w Google Maps
               </a>
             </Button>
           </Grid.Column>
@@ -273,12 +271,12 @@ const HomepageLayout = () => (
         </Grid.Row>
       </Grid>
     </Segment>
-    <Segment style={{ padding: '7em 10em' }} vertical>
+    <Segment style={{ padding: '7em 10em' }} vertical id='dlaczego-MAPOL'>
       <Grid columns='equal' stackable>
         <Grid.Row textAlign='center' style={{ paddingBottom:'2em' }}>
           <Grid.Column >
             <Header as='h3' style={{ fontSize: '2.5em', }}>Warto wybrać MAPOL</Header>
-            <p style={{ fontSize: '1.33em', }}>Może tu jakiś tekst</p>
+            <p style={{ fontSize: '1.33em', }}>Może tu jakiś tekst (albo w ogóle wywalić nagłówek)</p>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row textAlign='center'>
@@ -305,7 +303,7 @@ const HomepageLayout = () => (
         </Grid.Row>
       </Grid>
     </Segment>
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
+    <Segment inverted vertical style={{ padding: '3em 0em' }}>
       <Container>
         <Grid inverted stackable>
           <Grid.Row>
@@ -316,7 +314,7 @@ const HomepageLayout = () => (
             </Grid.Column>
             <Grid.Column width={3} floated='right'>
               <List link inverted>
-                <List.Item as='a'>&#169;Adeptus Virtuales 2019</List.Item>
+                <List.Item as='a'>&#169;Adeptus Virtuales <Icon name='shekel'/> 2019</List.Item>
               </List>
             </Grid.Column>
           </Grid.Row>

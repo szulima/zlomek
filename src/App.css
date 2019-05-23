@@ -1,33 +1,17 @@
-.App {
-  text-align: center;
+.orange.money.bill.alternate.huge.circular.icon:Hover,
+.orange.dolly.flatbed.huge.circular.icon:Hover,
+.orange.truck.huge.circular.icon:Hover,
+.orange.dot.circle.outline.huge.circular.icon:Hover {
+  background-color: #f2711c;
+  color: #fff !important;
+  box-shadow: none;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.ui.inverted.vertical.center.aligned.segment {
+  background-image: url('./assets/header80.png'); 
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ui.secondary.inverted.menu a.item {
+  opacity: 1 !important
 }
