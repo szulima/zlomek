@@ -14,7 +14,14 @@ import {
   Segment,
   Sidebar,
   Visibility,
-} from 'semantic-ui-react'
+} from 'semantic-ui-react';
+import {
+  Map,
+  InfoWindow, 
+  Marker, 
+  GoogleApiWrapper
+} from 'google-maps-react';
+import MapContainer from './components/MapContainer';
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -67,6 +74,9 @@ HomepageHeading.propTypes = {
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
  * It can be more complicated, but you can create really flexible markup.
  */
+
+const ImageMap = () => <Image src='./src/assets/map.png' fluid />
+
 class DesktopContainer extends Component {
   state = {}
 
@@ -228,8 +238,8 @@ const HomepageLayout = () => (
         <Header style={{color:'white', letterSpacing: 2, fontSize:'2em'}}>604 994 446</Header>
       </Container>
     </Segment>
-    <Segment style={{ padding: '20em 8em 4em 8em' }} vertical id='jak-trafic'>
-      <Grid columns='three' stackable textAlign='center'>
+    <Segment style={{ padding: '4em 8em 4em 8em' }} vertical id='jak-trafic'>
+       <Grid columns='three' stackable textAlign='center'>
         <Grid.Row>
           <Grid.Column>
             <Header as='h3' style={{ fontSize: '1.5em'}}>
@@ -269,9 +279,14 @@ const HomepageLayout = () => (
             </List>
           </Grid.Column>
         </Grid.Row>
-      </Grid>
+      </Grid> 
     </Segment>
-    <Segment style={{ padding: '7em 10em' }} vertical id='dlaczego-MAPOL'>
+    <div>
+      <Container>
+        <ImageMap />
+      </Container>
+    </div>  
+    <Segment style={{ padding: '10em 2em' }} vertical id='dlaczego-MAPOL'>
       <Grid columns='equal' stackable>
         <Grid.Row textAlign='center' style={{ paddingBottom:'2em' }}>
           <Grid.Column >
