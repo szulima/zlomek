@@ -95,7 +95,7 @@ class DesktopContainer extends Component {
               color={fixed ? 'red' : 'white'}
               size={fixed ?  'normal' : 'huge'}
               borderless
-              style={fixed ? null : {backgroundColor: 'rgba(256,256,256,0)'}}
+              style={fixed ? null : {backgroundColor: 'rgba(256,256,256,0)', color: 'white'}}
             >
               <Container>
                 <Menu.Item as='a' href='#o-firmie'>O firmie</Menu.Item>
