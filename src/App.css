@@ -15,3 +15,17 @@
 .ui.secondary.inverted.menu a.item {
   opacity: 1 !important
 }
+
+.ui.vertical.segment.jak-trafic {
+  background-image: url('./assets/map.png');
+  background-position: center center;
+}
+
+.ui.menu .item {
+  color: #fff !important;
+  font-weight: bold !important;
+}
+
+.orange.sidebar.large.bordered.inverted.icon {
+  border-radius: 10%;
+}

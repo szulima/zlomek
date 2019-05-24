@@ -14,14 +14,15 @@ import {
   Segment,
   Sidebar,
   Visibility,
+  Card,
 } from 'semantic-ui-react';
-import {
-  Map,
-  InfoWindow, 
-  Marker, 
-  GoogleApiWrapper
-} from 'google-maps-react';
-import MapContainer from './components/MapContainer';
+// import {
+//   Map,
+//   InfoWindow, 
+//   Marker, 
+//   GoogleApiWrapper
+// } from 'google-maps-react';
+// import MapContainer from './components/MapContainer';
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -170,9 +171,9 @@ class MobileContainer extends Component {
             className='bg-image'
           >
             <Container>
-              <Menu inverted pointing secondary size='large'>
+              <Menu inverted pointing secondary size='huge'>
                 <Menu.Item onClick={this.handleToggle}>
-                  <Icon name='sidebar' />
+                  <Icon name='sidebar' size='large' color='orange' inverted bordered/>
                 </Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' href='#kontakt' color='orange'>
@@ -238,10 +239,42 @@ const HomepageLayout = () => (
         <Header style={{color:'white', letterSpacing: 2, fontSize:'2em'}}>604 994 446</Header>
       </Container>
     </Segment>
-    <Segment style={{ padding: '4em 8em 4em 8em' }} vertical id='jak-trafic'>
+    <Segment style={{ padding: '4em 2em' }} vertical id='dlaczego-MAPOL'>
+      <Grid columns='equal' stackable>
+        {/* <Grid.Row textAlign='center' style={{ paddingBottom:'2em' }}>
+          <Grid.Column >
+            <Header as='h3' style={{ fontSize: '2.5em', }}>Warto wybrać MAPOL</Header>
+            <p style={{ fontSize: '1.33em', }}>Może tu jakiś tekst (albo w ogóle wywalić nagłówek)</p>
+          </Grid.Column>
+        </Grid.Row> */}
+        <Grid.Row textAlign='center'>
+          <Grid.Column>
+            <Icon name='money bill alternate' color='orange' circular size='huge'/>
+            <Header as='h3' style={{ fontSize: '1.5em', textTransform: 'uppercase', }}>Płatność gotówką</Header>
+            <p style={{ fontSize: '1.33em', }}>Przy większych ilościach możliwość negocjacji ceny</p>
+          </Grid.Column>
+          <Grid.Column>
+            <Icon name='dolly flatbed' color='orange' circular size='huge'/>
+            <Header as='h3' style={{ fontSize: '1.5em', textTransform: 'uppercase', }}>Waga najazdowa</Header>
+            <p style={{ fontSize: '1.33em', }}>Waga do ? ton pozwala szybko i sprawnie obsłużyć klienta</p>
+          </Grid.Column>
+          <Grid.Column>
+            <Icon name='truck' color='orange' circular size='huge'/>
+            <Header as='h3' style={{ fontSize: '1.5em', textTransform: 'uppercase', }}>Odbiór złomu</Header>
+            <p style={{ fontSize: '1.33em', }}>Odbiór złomu u klienta już od ? ton.</p>
+          </Grid.Column>
+          <Grid.Column>
+            <Icon name='dot circle outline' color='orange' circular size='huge'/>
+            <Header as='h3' style={{ fontSize: '1.5em', textTransform: 'uppercase', }}>Skawina i okolice</Header>
+            <p style={{ fontSize: '1.33em', }}>Działamy na terenie Skawiny, Krakowa i okolic</p>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+    <Segment style={{ padding: '8em 8em 24em 8em' }} vertical id='jak-trafic' className='jak-trafic'>
        <Grid columns='three' stackable textAlign='center'>
         <Grid.Row>
-          <Grid.Column>
+          <Grid.Column className='jak-trafic-cards'>
             <Header as='h3' style={{ fontSize: '1.5em'}}>
               <Icon name='home' size='tiny'/>
               Adres:
@@ -280,43 +313,6 @@ const HomepageLayout = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid> 
-    </Segment>
-    <div>
-      <Container>
-        <ImageMap />
-      </Container>
-    </div>  
-    <Segment style={{ padding: '10em 2em' }} vertical id='dlaczego-MAPOL'>
-      <Grid columns='equal' stackable>
-        <Grid.Row textAlign='center' style={{ paddingBottom:'2em' }}>
-          <Grid.Column >
-            <Header as='h3' style={{ fontSize: '2.5em', }}>Warto wybrać MAPOL</Header>
-            <p style={{ fontSize: '1.33em', }}>Może tu jakiś tekst (albo w ogóle wywalić nagłówek)</p>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row textAlign='center'>
-          <Grid.Column>
-            <Icon name='money bill alternate' color='orange' circular size='huge'/>
-            <Header as='h3' style={{ fontSize: '1.5em', textTransform: 'uppercase', }}>Płatność gotówką</Header>
-            <p style={{ fontSize: '1.33em', }}>Przy większych ilościach możliwość negocjacji ceny</p>
-          </Grid.Column>
-          <Grid.Column>
-            <Icon name='dolly flatbed' color='orange' circular size='huge'/>
-            <Header as='h3' style={{ fontSize: '1.5em', textTransform: 'uppercase', }}>Waga najazdowa</Header>
-            <p style={{ fontSize: '1.33em', }}>Waga do ? ton pozwala szybko i sprawnie obsłużyć klienta</p>
-          </Grid.Column>
-          <Grid.Column>
-            <Icon name='truck' color='orange' circular size='huge'/>
-            <Header as='h3' style={{ fontSize: '1.5em', textTransform: 'uppercase', }}>Odbiór złomu</Header>
-            <p style={{ fontSize: '1.33em', }}>Odbiór złomu u klienta już od ? ton.</p>
-          </Grid.Column>
-          <Grid.Column>
-            <Icon name='dot circle outline' color='orange' circular size='huge'/>
-            <Header as='h3' style={{ fontSize: '1.5em', textTransform: 'uppercase', }}>Skawina i okolice</Header>
-            <p style={{ fontSize: '1.33em', }}>Działamy na terenie Skawiny, Krakowa i okolic</p>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
     </Segment>
     <Segment inverted vertical style={{ padding: '3em 0em' }}>
       <Container>
