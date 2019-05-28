@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.856f0837.chunk.css",
-    "main.js": "/static/js/main.208a78f4.chunk.js",
-    "main.js.map": "/static/js/main.208a78f4.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.621b5bde.chunk.css": "/static/css/2.621b5bde.chunk.css",
-    "static/js/2.1a5d390e.chunk.js": "/static/js/2.1a5d390e.chunk.js",
-    "static/js/2.1a5d390e.chunk.js.map": "/static/js/2.1a5d390e.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.f6550bc2723fe81827e2f9ea791c6d25.js": "/precache-manifest.f6550bc2723fe81827e2f9ea791c6d25.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.621b5bde.chunk.css.map": "/static/css/2.621b5bde.chunk.css.map",
-    "static/css/main.856f0837.chunk.css.map": "/static/css/main.856f0837.chunk.css.map",
-    "static/media/semantic.min.css": "/static/media/outline-icons.ef60a4f6.woff",
-    "static/media/header-sepia.jpg": "/static/media/header-sepia.85acbed8.jpg",
-    "static/media/App.css": "/static/media/header.cc56a63d.jpg"
+    "main.css": "/zlomek/static/css/main.87222863.chunk.css",
+    "main.js": "/zlomek/static/js/main.77ff4cc0.chunk.js",
+    "main.js.map": "/zlomek/static/js/main.77ff4cc0.chunk.js.map",
+    "runtime~main.js": "/zlomek/static/js/runtime~main.04b27b24.js",
+    "runtime~main.js.map": "/zlomek/static/js/runtime~main.04b27b24.js.map",
+    "static/css/2.2d7a64b1.chunk.css": "/zlomek/static/css/2.2d7a64b1.chunk.css",
+    "static/js/2.faeec093.chunk.js": "/zlomek/static/js/2.faeec093.chunk.js",
+    "static/js/2.faeec093.chunk.js.map": "/zlomek/static/js/2.faeec093.chunk.js.map",
+    "index.html": "/zlomek/index.html",
+    "precache-manifest.0c937de580c15471fcf50b27d20c7430.js": "/zlomek/precache-manifest.0c937de580c15471fcf50b27d20c7430.js",
+    "service-worker.js": "/zlomek/service-worker.js",
+    "static/css/2.2d7a64b1.chunk.css.map": "/zlomek/static/css/2.2d7a64b1.chunk.css.map",
+    "static/css/main.87222863.chunk.css.map": "/zlomek/static/css/main.87222863.chunk.css.map",
+    "static/media/semantic.min.css": "/zlomek/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/App.css": "/zlomek/static/media/map.0e798003.png"
   }
 }
