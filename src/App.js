@@ -210,9 +210,9 @@ ResponsiveContainer.propTypes = {
 const HomepageLayout = () => (
   <ResponsiveContainer>
     <Segment style={{ padding: '8em 0em' }} vertical id='o-firmie'>
-      <Grid container stackable verticalAlign='middle'>
+      <Grid container stackable verticalAlign='top'>
         <Grid.Row>
-          <Grid.Column width={8}>
+          <Grid.Column width={10}>
             <Header as='h3' style={{ fontSize: '2em' }}>
               O firmie
             </Header>
@@ -224,7 +224,7 @@ const HomepageLayout = () => (
             </p>
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='./assets/header-sepia.jpg' />
+            <Image bordered rounded size='large' src='http://speedhunters-wp-production.s3.amazonaws.com/wp-content/uploads/2015/11/19210013/Junkyard-Tour-10-copy.jpg' />
           </Grid.Column>
         </Grid.Row>
       </Grid>
