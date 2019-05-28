@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3c1016fd3e706c8fb7bf5d8823b938f2",
+    "revision": "dbcbdc75d25c9aca6b8b8f5d52e6a27a",
     "url": "/zlomek/index.html"
   },
   {
-    "revision": "70922fd353154284fdaa",
+    "revision": "28e35d4deb1436402f73",
     "url": "/zlomek/static/css/2.2d7a64b1.chunk.css"
   },
   {
-    "revision": "5fa2746d641c8a6c3c74",
+    "revision": "714a29d3cf3e6c23630b",
     "url": "/zlomek/static/css/main.87222863.chunk.css"
   },
   {
-    "revision": "70922fd353154284fdaa",
-    "url": "/zlomek/static/js/2.faeec093.chunk.js"
+    "revision": "28e35d4deb1436402f73",
+    "url": "/zlomek/static/js/2.2c6610ed.chunk.js"
   },
   {
-    "revision": "5fa2746d641c8a6c3c74",
-    "url": "/zlomek/static/js/main.b78ca58b.chunk.js"
+    "revision": "714a29d3cf3e6c23630b",
+    "url": "/zlomek/static/js/main.a7eea912.chunk.js"
   },
   {
     "revision": "e3e05c769a0a9f88ada4",
