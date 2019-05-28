@@ -239,7 +239,7 @@ const HomepageLayout = () => (
         <Header style={{color:'white', letterSpacing: 2, fontSize:'2em'}}>604 994 446</Header>
       </Container>
     </Segment>
-    <Segment style={{ padding: '4em 2em' }} vertical id='dlaczego-MAPOL'>
+    <Segment style={{ padding: '12em', }} vertical id='dlaczego-MAPOL'>
       <Grid columns='equal' stackable>
         {/* <Grid.Row textAlign='center' style={{ paddingBottom:'2em' }}>
           <Grid.Column >
@@ -272,44 +272,54 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
     <Segment style={{ padding: '8em 8em 24em 8em' }} vertical id='jak-trafic' className='jak-trafic'>
-       <Grid columns='three' stackable textAlign='center'>
-        <Grid.Row>
+       <Grid columns='three' stackable textAlign='center' >
+        <Grid.Row style={{padding: '10em'}}>
+      
+{//center element!
+}
+
+          <Grid.Column>
+            <Card style={{ padding: '2em' }}>
+              <Header as='h3' style={{ fontSize: '1.5em'}}>
+                <Icon name='phone' flipped='horizontally' size='tiny'/>
+                Kontakt:
+              </Header>
+              <List style={{fontSize: '1.1em'}}>
+                <List.Item>696 171 183</List.Item>
+                <List.Item>604 994 446</List.Item>
+                <List.Item>e-mail: ?</List.Item>
+              </List>
+            </Card>  
+          </Grid.Column>
           <Grid.Column className='jak-trafic-cards'>
-            <Header as='h3' style={{ fontSize: '1.5em'}}>
-              <Icon name='home' size='tiny'/>
-              Adres:
-            </Header>
-            <List style={{fontSize: '1.1em'}}>
-              <List.Item>F.H.U. MAPOL Maciej Polek</List.Item>
-              <List.Item>ul. Piłsudskiego 7</List.Item>
-              <List.Item>32-050 Skawina</List.Item>
-            </List>
-            <Button size='small'>
-              <a target="_blank" rel="noopener noreferrer" href='https://www.google.com/maps/place/SKUP+ZŁOMU+F.H.U+"MAPOL"/@49.9726156,19.8083925,15z/data=!4m5!3m4!1s0x0:0xfeabd5dbda18f75a!8m2!3d49.9726156!4d19.8083925' style={{color: 'black'}}>
-                Sprawdź trasę w Google Maps
-              </a>
-            </Button>
-          </Grid.Column>
+            <Card style={{ padding: '2em' }}>
+              <Header as='h3' style={{ fontSize: '1.5em'}}>
+                <Icon name='home' size='tiny'/>
+                Adres:
+              </Header>
+              <List style={{fontSize: '1.1em'}}>
+                <List.Item>F.H.U. MAPOL Maciej Polek</List.Item>
+                <List.Item>ul. Piłsudskiego 7</List.Item>
+                <List.Item>32-050 Skawina</List.Item>
+              </List>
+              <Button size='small'>
+                <a target="_blank" rel="noopener noreferrer" href='https://www.google.com/maps/place/SKUP+ZŁOMU+F.H.U+"MAPOL"/@49.9726156,19.8083925,15z/data=!4m5!3m4!1s0x0:0xfeabd5dbda18f75a!8m2!3d49.9726156!4d19.8083925' style={{color: 'black'}}>
+                  Sprawdź trasę w Google Maps
+                </a>
+              </Button>
+            </Card>
+          </Grid.Column>          
           <Grid.Column>
-            <Header as='h3' style={{ fontSize: '1.5em'}}>
-              <Icon name='phone' flipped='horizontally' size='tiny'/>
-              Kontakt:
-            </Header>
-            <List style={{fontSize: '1.1em'}}>
-              <List.Item>696 171 183</List.Item>
-              <List.Item>604 994 446</List.Item>
-              <List.Item>e-mail: ?</List.Item>
-            </List>
-          </Grid.Column>
-          <Grid.Column>
-            <Header as='h3' style={{ fontSize: '1.5em'}}>
-              <Icon name='clock' flipped='horizontally' size='tiny'/>
-              Godziny otwarcia:
-            </Header>
-            <List style={{fontSize: '1.1em'}}>
-              <List.Item>poniedziałek - piątek: 8:00-17:00</List.Item>
-              <List.Item>sobota: 8:00-14:00</List.Item>
-            </List>
+            <Card style={{ padding: '2em' }}>
+              <Header as='h3' style={{ fontSize: '1.5em'}}>
+                <Icon name='clock' flipped='horizontally' size='tiny'/>
+                Godziny otwarcia:
+              </Header>
+              <List style={{fontSize: '1.1em'}}>
+                <List.Item>poniedziałek - piątek: 8:00-17:00</List.Item>
+                <List.Item>sobota: 8:00-14:00</List.Item>
+              </List>
+            </Card>  
           </Grid.Column>
         </Grid.Row>
       </Grid> 
